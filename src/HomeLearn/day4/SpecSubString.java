@@ -6,8 +6,8 @@ package HomeLearn.day4;
 
 import java.util.Stack;
 
-public class SpecSubString {
-    public static void main (String[] argCommStr) {
+class SpecSubString {
+    public static void main (String[] args) {
         // Объявление строк str1, str2, str3, символа t, и подстроки Top
         String str1 = "have a file with a big list of strings which is of the form";
         String str2, str3;
@@ -18,7 +18,7 @@ public class SpecSubString {
         System.out.println ("Строка до замены символа " + chT1 + ": " + "\n" + str1);
         // Переменной str2 присвоена сумма из подстрок, использующих методы, 
         // реализующие параметры, в которых указывается индекс в переменной indexT1
-        str2 = str1.substring (0, indexT1) + substringTop + str1.substring(indexT1 + 1);
+        str2 = str1.substring (0, indexT1) + substringTop + str1.substring (indexT1 + 1);
         System.out.println ("Строка после замены символа " + chT1 + " под индексом " + indexT1);
         // Печать текущей строки
         System.out.println (str2);
@@ -30,11 +30,11 @@ public class SpecSubString {
         System.out.println ("Новый стек, построенный из индексов всех символов " + chT1 + ": ");
         Stack<Integer> intStackTAll = new Stack<>();
         // Вызов метода indexOf() для получения первого значения переменной indexTop
-        int indexTop = str1.indexOf(chT1);
+        int indexTop = str1.indexOf (chT1);
             // Создаём цикл для получения индексов всех вхождений переменной indexTop в строку
             while (indexTop != -1) {
-                intStackTAll.push(indexTop);
-                indexTop = str1.indexOf(chT1, indexTop + 1);
+                intStackTAll.push (indexTop);
+                indexTop = str1.indexOf (chT1, indexTop + 1);
             }
         // Вывод массива, состоящего из значений indexTop
         System.out.println (intStackTAll);

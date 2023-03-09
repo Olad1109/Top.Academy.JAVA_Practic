@@ -8,8 +8,8 @@ package HomeLearn.day3;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LongSubString {
-    public static String longestSubstring(String s) {
+class LongSubString {
+    public static String longestSubstring (String s) {
         // Реализация интерфейса Map на основе хеш-таблицы с помощью
         // класса Integer, что бы упаковать значения в объект HashMap<>()
         Map<Integer, Integer> lastPos = new HashMap<>();
@@ -28,18 +28,18 @@ public class LongSubString {
                 start = pos + Character.charCount(cp);
             } // определение набора символов в подстроке
         }
-        return (i > start + maxLen ? s.substring(start) : s.substring(maxStart, maxStart + maxLen));
+        return (i > start + maxLen ? s.substring(start) :
+                s.substring (maxStart, maxStart + maxLen));
     } // возврат результата метода
 
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         // Проверка на работоспособность интерфейса
-        for (String s : new String[] {
-                " 3ycqd2nxepmgh mqlz2 ", " pw wle w ", " aX bXldZefg Xh "
-        }) {
+        for (String s : new String[] {" 3ycqd2nxepmgh mqlz2 ", " pw wle w ",
+                " aX bXldZefg Xh "}) {
             String substr = longestSubstring(s);
             // Исключение лишних пробелов из substr
-            substr = substr.replaceAll("\\s+", "");
-            System.out.printf("%s: %s (%d)%n", s, substr, substr.length());
+            substr = substr.replaceAll ("\\s+", "");
+            System.out.printf ("%s: %s (%d)%n", s, substr, substr.length());
         }
     }
 }

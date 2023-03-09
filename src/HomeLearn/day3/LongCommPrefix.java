@@ -1,26 +1,25 @@
 package HomeLearn.day3;
 
-/*    ДЗ Практика 3.
-   Повторить код из занятия - по возможности реализовать
-   задания своими способами:
-      * поиск самого длинного общего префикса */
-public class LongCommPrefix {
-    public static void main(String[] args){
-        // Строки символов, созданные с помощью класса String
+/*    Р”Р— РџСЂР°РєС‚РёРєР° 3.
+   РџРѕРІС‚РѕСЂРёС‚СЊ РєРѕРґ РёР· Р·Р°РЅСЏС‚РёСЏ - РїРѕ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё СЂРµР°Р»РёР·РѕРІР°С‚СЊ
+   Р·Р°РґР°РЅРёСЏ СЃРІРѕРёРјРё СЃРїРѕСЃРѕР±Р°РјРё:
+      * РїРѕРёСЃРє СЃР°РјРѕРіРѕ РґР»РёРЅРЅРѕРіРѕ РѕР±С‰РµРіРѕ РїСЂРµС„РёРєСЃР° */
+
+class LongCommPrefix {
+    public static void main (String[] args) {
+        // РЎС‚СЂРѕРєРё СЃРёРјРІРѕР»РѕРІ, СЃРѕР·РґР°РЅРЅС‹Рµ СЃ РїРѕРјРѕС‰СЊСЋ РєР»Р°СЃСЃР° String
         String s1 = "Julia Had a Little Lamb";
         String s2 = "Julia Had a Big Lamb";
         int minStrLen;
-        minStrLen = s2.length(); // возвращение длины этой строки
-        // Предоставление API, совместимое со StringBuilder
+        minStrLen = s2.length(); // РІРѕР·РІСЂР°С‰РµРЅРёРµ РґР»РёРЅС‹ СЌС‚РѕР№ СЃС‚СЂРѕРєРё
+        // РџСЂРµРґРѕСЃС‚Р°РІР»РµРЅРёРµ API, СЃРѕРІРјРµСЃС‚РёРјРѕРµ СЃРѕ StringBuilder
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < minStrLen; i ++) {
-            // Возвращение значения char по указанному индексу
+            // Р’РѕР·РІСЂР°С‰РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ char РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
             if (s1.charAt(i) ==  s2.charAt(i)) {
-                output.append(s1.charAt(i));
-            } else {
-                break;
-            }
+                output.append (s1.charAt(i));
+            } else break;
         }
-        System.out.println(output);
+        System.out.println (output);
     }
 }

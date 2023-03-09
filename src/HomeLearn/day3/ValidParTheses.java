@@ -2,23 +2,21 @@ package HomeLearn.day3;
 
 import java.util.Stack;
 
-/*    ДЗ Практика 3.
-   Повторить код из занятия - по возможности реализовать
-   задания своими способами:
-      * проверка допустимости круглых скобок */
+/*    Р”Р— РџСЂР°РєС‚РёРєР° 3.
+   РџРѕРІС‚РѕСЂРёС‚СЊ РєРѕРґ РёР· Р·Р°РЅСЏС‚РёСЏ - РїРѕ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё СЂРµР°Р»РёР·РѕРІР°С‚СЊ
+   Р·Р°РґР°РЅРёСЏ СЃРІРѕРёРјРё СЃРїРѕСЃРѕР±Р°РјРё:
+      * РїСЂРѕРІРµСЂРєР° РґРѕРїСѓСЃС‚РёРјРѕСЃС‚Рё РєСЂСѓРіР»С‹С… СЃРєРѕР±РѕРє */
 
-public class ValidParTheses {
-    public static boolean ValidParent (String x) {
-        // Создание переменной Stack для хранения левых
-        // закрывающих символов
+class ValidParTheses {
+    static boolean ValidParent (String x) {
+        // РЎРѕР·РґР°РЅРёРµ РїРµСЂРµРјРµРЅРЅРѕР№ Stack РґР»СЏ С…СЂР°РЅРµРЅРёСЏ Р»РµРІС‹С…
+        // Р·Р°РєСЂС‹РІР°СЋС‰РёС… СЃРёРјРІРѕР»РѕРІ
         Stack<Character> leftCloseSymbols = new Stack<>();
-        // Цикл для каждого символа строки
+        // Р¦РёРєР» РґР»СЏ РєР°Р¶РґРѕРіРѕ СЃРёРјРІРѕР»Р° СЃС‚СЂРѕРєРё
         for (char y : x.toCharArray()) {
-            // Если присутствует левый символ
-            if (y == '(' || y == '{' || y == '[') {
-                leftCloseSymbols.push(y);
-            }
-            // Условие сочетания символов скобок
+            // Р•СЃР»Рё РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ Р»РµРІС‹Р№ СЃРёРјРІРѕР»
+            if (y == '(' || y == '{' || y == '[') leftCloseSymbols.push(y);
+            // РЈСЃР»РѕРІРёРµ СЃРѕС‡РµС‚Р°РЅРёСЏ СЃРёРјРІРѕР»РѕРІ СЃРєРѕР±РѕРє
             else if (y == ')' && !leftCloseSymbols.isEmpty()
                     && leftCloseSymbols.peek() == '(') {
                 leftCloseSymbols.pop();
@@ -29,16 +27,12 @@ public class ValidParTheses {
                     && leftCloseSymbols.peek() == '[') {
                 leftCloseSymbols.pop();
             }
-            // Если ни один из допустимых символов не встречается
-            else {
-                return false;
-            }
-        }
-        return leftCloseSymbols.isEmpty();
+            // Р•СЃР»Рё РЅРё РѕРґРёРЅ РёР· РґРѕРїСѓСЃС‚РёРјС‹С… СЃРёРјРІРѕР»РѕРІ РЅРµ РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ
+            else return false;
+        } return leftCloseSymbols.isEmpty();
     }
     public static void main (String[] args) {
-        System.out.println(ValidParent("()"));
-        System.out.println(ValidParent("([)]"));
-        System.out.println(ValidParent("{[]}"));
+        System.out.println (ValidParent("()") + "\n" + ValidParent("([)]")
+                + "\n" + ValidParent("{[]}"));
     }
 }
