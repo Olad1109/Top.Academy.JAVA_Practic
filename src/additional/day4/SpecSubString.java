@@ -1,4 +1,4 @@
-package HomeLearn.day4;
+package additional.day4;
 
 /*    ДЗ Практика 4.
    * Создать программу, которая в заданном тексте после символа T

@@ -1,9 +1,9 @@
-package HomeLearn.day6;
+package additional.day6;
 
 import java.util.Arrays;
 import java.util.Random;
 // Импорт статических объектов из другого класса
-import static HomeLearn.day6.ByArrMultiSolution_part_1.*;
+import static additional.day6.ByArrMultiSolution_part_1.*;
 // Объявляем класс ByArrMultiSolution_part_2
 class ByArrMultiSolution_part_2 {
 

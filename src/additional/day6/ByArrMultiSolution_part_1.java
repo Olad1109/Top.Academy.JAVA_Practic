@@ -1,4 +1,4 @@
-package HomeLearn.day6;
+package additional.day6;
 // Импорт стандартных библиотек JAVA
 import java.io.PrintStream;
 import java.util.Arrays;

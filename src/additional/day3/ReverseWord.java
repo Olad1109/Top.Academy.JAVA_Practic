@@ -1,4 +1,4 @@
-package HomeLearn.day3;
+package additional.day3;
 
 /*    ДЗ Практика 3.
    Повторить код из занятия - по возможности реализовать

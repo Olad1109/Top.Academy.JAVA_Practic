@@ -1,4 +1,4 @@
-package HomeLearn.day4;
+package additional.day4;
 
 /*    ДЗ Практика 4.
    * В каждом слове текста n-ную букву заменить заданным символом.

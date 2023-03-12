@@ -1,4 +1,4 @@
-package HomeLearn.day6;
+package additional.day6;
 
 import java.io.PrintStream;
 import java.util.Arrays;
